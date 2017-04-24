@@ -1,4 +1,4 @@
-set -ex
+set -e
 
 source settings.sh
 
