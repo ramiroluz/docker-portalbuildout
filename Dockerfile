@@ -5,10 +5,7 @@ RUN useradd --system --shell /bin/bash --comment 'Plone Administrator' \
  && mkdir -p /opt/plone /data/filestorage /data/blobstorage \
  && chown -R plone:plone /opt/plone /data
 
-ENV PLONE_MAJOR=4.3
-ENV PLONE_VERSION=4.3.12
-
-LABEL plone.version=$PLONE_VERSION
+LABEL plone.version=4.3.9
 LABEL os="ubuntu" os.version="14.04"
 
 RUN buildDeps="curl sudo python-setuptools python-dev build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg62-dev zlib1g-dev python-imaging wv poppler-utils git ca-certificates" \
