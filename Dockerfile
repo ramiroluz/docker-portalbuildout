@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+ADD VERSION .
+
 RUN useradd --system --shell /bin/bash --comment 'Plone Administrator' \
   --user-group -m --home-dir /opt/plone plone \
  && mkdir -p /opt/plone /data/filestorage /data/blobstorage \
