@@ -1,4 +1,4 @@
-set -ex
+set -e
 
 source settings.sh
 
@@ -6,7 +6,7 @@ source settings.sh
 git pull
 
 # bump version
-docker run --rm -v "$PWD":/app $USERNAME/bump patch
+docker run --rm -v "$PWD":/app treeder/bump patch
 version=`cat VERSION`
 echo "version: $version"
 
